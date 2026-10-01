@@ -1,0 +1,113 @@
+/*
+// ██╗   ██╗██╗ ██████╗████████╗ ██████╗ ██████╗
+// ██║   ██║██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗
+// ██║   ██║██║██║        ██║   ██║   ██║██████╔╝
+// ╚██╗ ██╔╝██║██║        ██║   ██║   ██║██╔══██╗
+//  ╚████╔╝ ██║╚██████╗   ██║   ╚██████╔╝██║  ██║
+//   ╚═══╝  ╚═╝ ╚═════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
+// VICTOR
+*/
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  color: #172033;
+}
+button, input { font: inherit; }
+.pagina {
+  width: min(700px, calc(100% - 32px));
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #2457a6;
+  font-weight: bold;
+}
+.marca {
+  font-size: 22px;
+}
+.status {
+  margin-left: auto;
+  color: #667085;
+  font-size: 13px;
+  font-weight: normal;
+}
+.introducao {
+  margin: 70px auto 25px;
+  width: min(100%, 540px);
+}
+.etiqueta {
+  color: #2457a6;
+  font-size: 12px;
+  font-weight: bold;
+}
+h1 {
+  font-size: clamp(38px, 8vw, 56px);
+  line-height: 1.05;
+  margin: 12px 0;
+}
+h1 span { color: #3578d4; }
+.descricao { color: #5d6675; }
+.busca {
+  display: flex;
+  gap: 8px;
+  margin-top: 22px;
+}
+.busca > span { display: none; }
+.busca input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #bbc5d3;
+  border-radius: 7px;
+  background: white;
+}
+.busca button {
+  border: 0;
+  border-radius: 7px;
+  padding: 0 18px;
+  color: white;
+  background: #2868bd;
+  cursor: pointer;
+}
+.busca button:disabled { opacity: .6; }
+.aviso, .dica, .cartao {
+  width: min(100%, 540px);
+  margin: 0 auto;
+  padding: 18px;
+  background: white;
+  border: 1px solid #d5dce6;
+  border-radius: 9px;
+}
+.aviso { color: #a52222; }
+.cartao-cabecalho { display: flex; justify-content: space-between; align-items: center; }
+.cartao-cabecalho .etiqueta { margin: 0 0 8px; }
+h2 { margin: 0; font-size: 25px; }
+.regiao, .condicao { color: #667085; }
+.icone-clima { font-size: 36px; }
+.temperatura { font-size: 72px; font-weight: bold; margin-top: 15px; }
+.temperatura span { font-size: 30px; vertical-align: top; }
+.detalhes {
+  border-top: 1px solid #d5dce6;
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.detalhes div { display: flex; flex-direction: column; gap: 6px; }
+.detalhes span { color: #667085; font-size: 11px; }
+footer { margin-top: auto; padding-top: 45px; text-align: center; color: #667085; font-size: 12px; }
+@media (max-width: 480px) {
+  .introducao { margin-top: 50px; }
+  .busca button { padding: 0 12px; }
+  .cartao { padding: 15px; }
+  .detalhes strong { font-size: 13px; }
+}
